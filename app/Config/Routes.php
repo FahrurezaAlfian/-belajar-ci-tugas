@@ -10,7 +10,11 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
 
 $routes->get('login', 'AuthController::login');
+<<<<<<< HEAD
 $routes->post('login', 'AuthController::login', ['filter' => 'redirect']);
+=======
+$routes->post('login', 'AuthController::login', ['filter' => 'redirect']) ;
+>>>>>>> af335c2 (menambahkan data transaksi pembelian)
 $routes->get('logout', 'AuthController::logout');
 
 $routes->group('produk',['filter' => 'auth'], function ($routes)
@@ -30,6 +34,14 @@ $routes->group('keranjang', ['filter' => 'auth'], function ($routes) {
     $routes->get('clear', 'TransaksiController::cart_clear');
 });
 
+<<<<<<< HEAD
+=======
+$routes->get('checkout', 'TransaksiController::checkout', ['filter' => 'auth']);
+$routes->get('getcity', 'TransaksiController::getcity', ['filter' => 'auth']);
+$routes->get('getcost', 'TransaksiController::getcost', ['filter' => 'auth']);
+$routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
+
+>>>>>>> af335c2 (menambahkan data transaksi pembelian)
 
 $routes->get('faq', 'Home::faq', ['filter' => 'auth']);
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);

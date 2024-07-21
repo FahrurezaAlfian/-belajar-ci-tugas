@@ -14,7 +14,11 @@ class AuthController extends BaseController
     function __construct()
     {
         helper('form');
+<<<<<<< HEAD
         $this->user = new UserModel();
+=======
+        $this->user = new UserModel() ;
+>>>>>>> af335c2 (menambahkan data transaksi pembelian)
     }
 
     public function login()

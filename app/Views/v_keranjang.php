@@ -52,5 +52,11 @@ if (session()->getFlashData('success')) {
 
 <button type="submit" class="btn btn-primary">Perbarui Keranjang</button>
 <a class="btn btn-warning" href="<?php echo base_url() ?>keranjang/clear">Kosongkan Keranjang</a>
+<<<<<<< HEAD
+=======
+<?php if (!empty($items)) : ?>
+    <a class="btn btn-success" href="<?php echo base_url() ?>checkout">Selesai Belanja</a>
+<?php endif; ?>
+>>>>>>> af335c2 (menambahkan data transaksi pembelian)
 <?php echo form_close() ?>
 <?= $this->endSection() ?>

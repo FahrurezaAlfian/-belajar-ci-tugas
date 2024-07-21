@@ -22,7 +22,7 @@ $routes->group('produk',['filter' => 'auth'], function ($routes)
     $routes->get('', 'ProdukController::index');
     $routes->post('', 'ProdukController::create');
     $routes->post('edit/(:any)', 'ProdukController::edit/$1');
-    $routes->get('delete/(any)', 'ProdukController::delete/$1');
+    $routes->get('delete/(:any)', 'ProdukController::delete/$1');
     $routes->get('download', 'ProdukController::download');
 });
 
@@ -46,3 +46,4 @@ $routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
 $routes->get('faq', 'Home::faq', ['filter' => 'auth']);
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);
 $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
+$routes->get('transaksi', 'Home::transaksi', ['filter' => 'auth']);

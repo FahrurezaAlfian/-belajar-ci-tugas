@@ -30,6 +30,13 @@
         ?>
 
         <li class="nav-item">
+            <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="transaksi">
+                <i class="bi bi-file"></i>
+                <span>Transaksi</span>
+            </a>
+            </li>
+
+        <li class="nav-item">
             <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>

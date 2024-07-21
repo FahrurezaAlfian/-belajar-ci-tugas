@@ -2,33 +2,17 @@
 
 namespace App\Controllers;
 
-
 class TransaksiController extends BaseController
 {
     protected $cart;
-=======
-use App\Models\TransactionModel;
-use App\Models\TransactionDetailModel;
-
-class TransaksiController extends BaseController
-{
-    protected $cart;
-    protected $url = "https://api.rajaongkir.com/starter/";
-    protected $apiKey = "4cc7af1215bce31ffc76edfbced0f134";
-    protected $transaction;
-    protected $transaction_detail;
->>>>>>> af335c2 (menambahkan data transaksi pembelian)
 
     function __construct()
     {
         helper('number');
         helper('form');
         $this->cart = \Config\Services::cart();
- HEAD
-=======
         $this->transaction = new TransactionModel ();
         $this->transaction_detail = new TransactionDetailModel ();
-
     }
 
     public function index()
@@ -78,9 +62,6 @@ class TransaksiController extends BaseController
         session()->setflashdata('success', 'Keranjang Berhasil Dihapus');
         return redirect()->to(base_url('keranjang'));
     }
-<<<<<<< HEAD
-}
-=======
 
     public function checkout()
     {
@@ -209,4 +190,3 @@ class TransaksiController extends BaseController
     }
 }
 }
->>>>>>> af335c2 (menambahkan data transaksi pembelian)

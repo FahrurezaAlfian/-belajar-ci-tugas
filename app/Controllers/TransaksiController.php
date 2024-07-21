@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-<<<<<<< HEAD
+
 class TransaksiController extends BaseController
 {
     protected $cart;
@@ -24,11 +24,11 @@ class TransaksiController extends BaseController
         helper('number');
         helper('form');
         $this->cart = \Config\Services::cart();
-<<<<<<< HEAD
+ HEAD
 =======
         $this->transaction = new TransactionModel ();
         $this->transaction_detail = new TransactionDetailModel ();
->>>>>>> af335c2 (menambahkan data transaksi pembelian)
+
     }
 
     public function index()
